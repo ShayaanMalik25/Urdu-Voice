@@ -10,7 +10,7 @@ from livekit.plugins import (
 )
 from livekit.plugins.turn_detector.multilingual import MultilingualModel
 
-# Import the new unified Uplift TTS plugin
+# Import the Uplift TTS plugin
 from uplift_tts import TTS
 
 class Assistant(Agent):
@@ -41,7 +41,7 @@ You are a knowledgeable Pakistani, who answers questions about Pakistans history
 async def entrypoint(ctx: agents.JobContext):
     
     tts = TTS(
-        voice_id="17", 
+        voice_id="v_meklc281", 
         output_format="MP3_22050_32",
     )
     
