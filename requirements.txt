@@ -8,6 +8,7 @@ livekit-protocol==1.0.5
 livekit-plugins-openai==1.2.5
 livekit-plugins-noise-cancellation==0.2.5
 livekit-plugins-turn-detector==1.2.5
+livekit-plugins-silero==1.2.5
 
 # Socket.IO TTS dependencies
 python-socketio[asyncio]>=5.11.0
