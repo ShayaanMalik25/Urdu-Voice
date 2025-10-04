@@ -6,12 +6,11 @@ from livekit.agents import AgentSession, Agent, RoomInputOptions
 from livekit.plugins import (
     openai,
     noise_cancellation,
+    upliftai,
     silero,
 )
 from livekit.plugins.turn_detector.multilingual import MultilingualModel
 
-# Import the Uplift TTS plugin
-from uplift_tts import TTS
 
 class Assistant(Agent):
     def __init__(self) -> None:
@@ -40,7 +39,7 @@ You are a knowledgeable Pakistani, who answers questions about Pakistans history
 
 async def entrypoint(ctx: agents.JobContext):
     
-    tts = TTS(
+    tts = upliftai.TTS(
         voice_id="v_meklc281", 
         output_format="MP3_22050_32",
     )
@@ -50,7 +49,6 @@ async def entrypoint(ctx: agents.JobContext):
         llm=openai.LLM(model="gpt-4o-mini"),
         tts=tts,
         vad=silero.VAD.load(),
-        turn_detection=MultilingualModel(),
     )
 
     await session.start(
