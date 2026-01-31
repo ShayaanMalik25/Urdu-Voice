@@ -353,4 +353,5 @@ if __name__ == "__main__":
         entrypoint_fnc=entrypoint,
         initialize_process_timeout=60,
         prewarm_fnc=prewarm,
+        port=8082,  # Use port 8082 to avoid conflict with nginx on 8081
     ))
