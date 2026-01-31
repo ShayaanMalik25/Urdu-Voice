@@ -10,6 +10,8 @@ livekit-plugins-noise-cancellation==0.2.5
 livekit-plugins-turn-detector==1.2.8
 livekit-plugins-upliftai==1.2.8
 livekit-plugins-silero==1.2.8
+livekit-plugins-elevenlabs==1.2.8
+livekit-plugins-cartesia==1.2.8
 
 # Socket.IO TTS dependencies
 python-socketio[asyncio]>=5.11.0
@@ -19,5 +21,14 @@ aiohttp>=3.9.0
 python-dotenv>=1.0.0
 loguru>=0.7.0
 
-# OpenAI for STT/LLM
+# OpenAI for LLM (Ollama uses OpenAI-compatible API)
 openai>=1.84.0
+
+# ElevenLabs client for testing
+elevenlabs>=1.0.0
+
+# In-process STT (Faster Whisper)
+faster-whisper>=1.1.1
+ctranslate2>=4.4.0
+soundfile>=0.12.1
+numpy>=1.24.0
